@@ -1,0 +1,200 @@
+<html>
+    <head>
+        <meta charset="utf8">
+        <style>
+            body {
+                margin: 0;
+                overflow: hidden;
+                overflow-x: hidden;
+            }
+
+            canvas {
+                display: block;
+                background: black;
+            }
+
+            .load-animation-root
+            {
+                width: 100vw;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 3;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+            }
+            .animate.load-animation-root
+            {
+                animation: displacing-core 3s ease-in 0s infinite;
+            }
+
+            @keyframes rotating-core {
+                0% {
+                    transform: rotate(45deg);
+                }
+                5% {
+                    transform: rotate(45deg);
+                    
+                }
+                30% {
+                    transform: rotate(-45deg);
+                }
+
+                100% {
+                    transform: rotate(-45deg);
+                }
+            }
+
+            @keyframes displacing-core {
+                0% {
+                    transform: translate(0, 0px);
+                }
+                5% {
+                    transform: translate(0, 0px);
+                    animation-timing-function: ease;
+                }
+
+                28% {
+                    transform: translate(0, -10%);
+                    animation-timing-function: linear;
+                }
+
+                30% {
+                    transform: translate(0, 0px);
+                    animation-timing-function: ease-in;
+                }
+
+                100% {
+                    transform: translate(0, 0px);
+                }
+            }
+
+            @keyframes shadow-animation {
+                0% {
+                    opacity: 1;
+                    transform: translate(0, 0) rotate(45deg);
+                }
+
+                3% {
+                    opacity: 1;
+                }
+
+                10% {
+                    transform: translate(100%, 0) rotate(45deg);
+                }
+
+                50% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 0;
+                    transform: translate(100%, 0) rotate(45deg);
+                }
+            }
+
+            @keyframes color-core {
+                0% {
+                    background-color: white;
+                }
+
+                29% {
+                    background-color: white;
+                }
+
+                30% {
+                    background-color: #cccccc;
+                }
+
+                40% {
+                    background-color: white;
+                }
+
+                100% {
+                    background-color: white;
+                }
+            }
+
+            @keyframes sliding-core {
+                0% {
+                    transform: translate(0, 0px);
+                    animation-timing-function: cubic-bezier(.08,.82,.17,1);
+                }
+
+                10% {
+                    transform: translate(-50%, 0);
+                }
+
+                20% {
+                    transform: translate(-50%, 0);
+                    animation-timing-function: ease-in-out;
+                }
+                
+                50% {
+                    transform: translate(0, 0px);
+                }
+            }
+
+            .load-animation-container
+            {
+                width: min(30vw, 30vh);
+                height: min(30vw, 30vh);
+                position: relative;
+            }
+
+            .load-animation-table
+            {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .load-animation-main
+            {
+                transform: rotate(45deg);
+            }
+
+            .load-animation-shadow
+            {
+                opacity: 0;
+                transform: rotate(45deg);
+            }
+
+            .load-animation-main>.show
+            {
+                background-color: white;
+            }
+
+            .animate .load-animation-main
+            {
+                animation: rotating-core 3s cubic-bezier(.8,0,.2,1) 0s infinite;
+            }
+
+            .animate .load-animation-shadow
+            {
+                animation: shadow-animation 3s cubic-bezier(.08,.82,.17,1) calc(3s * 0.3) infinite;
+            }
+
+            .animate .load-animation-main>.show
+            {
+                animation: color-core 3s linear 0s infinite;
+            }
+
+            .animate .load-animation-container
+            {
+                animation: sliding-core 3s linear calc(3s * 0.3) infinite;
+            }
+        </style>
+    </head>
+    <body id="root" style="background-color: black;">
+        <script src="./core.js" type="module"></script>
+    </body>
+</html>
