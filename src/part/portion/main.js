@@ -1,5 +1,5 @@
-import SharedSystem from "../../map/shared_system.js";
-import {Side} from "../../map/tilelayer.js";
+import SharedSystem from "../../connected/map/shared_system.js";
+import {Side} from "../../connected/map/tilelayer.js";
 
 function setup(app, container)
 {

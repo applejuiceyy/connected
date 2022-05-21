@@ -1,4 +1,4 @@
-import { World } from "../../../../map/world.js";
+import { World } from "../../../../connected/map/world.js";
 
 function setup(app)
 {

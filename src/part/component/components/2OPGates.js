@@ -1,6 +1,6 @@
-import ComponentBuilder from "../../../../map/component.js";
-import { Listener, Emitter } from "../../../../map/component.js";
-import { World } from "../../../../map/world.js";
+import ComponentBuilder from "../../../../connected/map/component.js";
+import { Listener, Emitter } from "../../../../connected/map/component.js";
+import { World } from "../../../../connected/map/world.js";
 
 class Component2Operations extends ComponentBuilder
 {

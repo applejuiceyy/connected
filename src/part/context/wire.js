@@ -1,4 +1,4 @@
-import { Color } from "../../../../map/shared_system.js";
+import { Color } from "../../../../connected/map/shared_system.js";
 
 function setup(app)
 {
