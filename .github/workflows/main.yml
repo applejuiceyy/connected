@@ -24,7 +24,7 @@ jobs:
         run: npm run build
       
       - name: Shush jekyll
-        run: touch build/.nojekyll
+        run: touch dist/.nojekyll
       
       - name: Deploy
         uses: s0/git-publish-subdir-action@develop
