@@ -1,5 +1,5 @@
-import { World } from "../../../../map/world.js";
-import { Component, Listener } from "../../../../map/component.js";
+import { World } from "../../../../connected/map/world.js";
+import { Component, Listener } from "../../../../connected/map/component.js";
 
 function setup(app, container) {
   let bindings = new Array(10).fill(null);

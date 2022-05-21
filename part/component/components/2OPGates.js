@@ -1,8 +1,8 @@
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-import ComponentBuilder from "../../../../map/component.js";
-import { Listener, Emitter } from "../../../../map/component.js";
-import { World } from "../../../../map/world.js";
+import ComponentBuilder from "../../../../connected/map/component.js";
+import { Listener, Emitter } from "../../../../connected/map/component.js";
+import { World } from "../../../../connected/map/world.js";
 
 class Component2Operations extends ComponentBuilder {
   constructor(...args) {
